@@ -9,6 +9,7 @@ MVP1:
 - create dir (mkdir 'mvp1')
 - create github project
 - create readme + push
+- add .gitignore
 
 ## create dir
 ```
@@ -42,9 +43,8 @@ git add * && git commit -m "mvp1 update" && git push origin main
 - tag image with our username
 - push it to Dockerhub
 
-
+## create venv
 ```
-mkdir django_ec2 && cd $_
 python3 -m venv venv
 source venv/bin/activate
 pip install Django
