@@ -127,6 +127,7 @@ docker tag mvp1 flexappdev/mvp1
 docker push flexappdev/mvp1
 ```
 
+# 2. Deploying to EC2
 
 Accessing the EC2 Instance
 - ssh to instance
@@ -141,10 +142,16 @@ Accessing the EC2 Instance
 cd ~/aws
 chmod 400 django_apps.pem
 ssh -i "django_apps.pem" ec2-user@ec2-18-130-204-170.eu-west-2.compute.amazonaws.com
-
-
+```
+cheat
+```
 cd ~/aws && chmod 400 django_apps.pem && ssh -i "django_apps.pem" ec2-user@ec2-18-130-204-170.eu-west-2.compute.amazonaws.com
+```
 
-docker run -d -p 8000:8000 flexappdev/django_ec2
-http://localhost:8000/
+docker run -d -p 9000:9000 flexappdev/mvp1
+http://ec2-18-130-204-170.eu-west-2.compute.amazonaws.com:9000/
 
+- Add the ec2-user to the docker group
+```
+sudo usermod -a -G docker ec2-user
+```
