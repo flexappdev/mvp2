@@ -47,6 +47,7 @@ clear && git add * && git commit -m "mvp1 update" && git push origin main
 ```
 
 # 1. Dockerize Django Application
+- create 'app' dir
 - create venv
 - install django
 - create django project
@@ -65,9 +66,20 @@ clear && git add * && git commit -m "mvp1 update" && git push origin main
 python3 -m venv venv
 source venv/bin/activate
 pip install Django
-django-admin startproject django_ec2_project
-cd django_ec2_project
+django-admin startproject app
+cd app
+
+python manage.py makemigrations
+python manage.py migrate
+
 python manage.py runserver
+
+
+```
+
+
+
+
 
 settings:
 ALLOWED_HOSTS = ['*']
