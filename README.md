@@ -25,7 +25,7 @@ git push -u origin main
 ```
 ## create readme + push
 ```
-git add * && git commit -m "update" && git push --force origin main
+git add * && git commit -m "update" && git push origin main
 ```
 
 # 1. Dockerize Django Application
