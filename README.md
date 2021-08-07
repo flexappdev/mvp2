@@ -4,6 +4,23 @@ MVP1:
 0. Setup github
 1. Dockerize Django Application
 
+## CHEAT
+```
+# start
+cd ~/mvp1/app && source venv/bin/activate && python manage.py runserver
+
+# end
+deactivate && cd .. && git add * && git commit -m "update" && git push -u origin main && cd ..
+
+# force push
+deactivate && cd .. && 
+git add * && git commit -m "update" && git push --force origin main
+
+python manage.py makemigrations
+python manage.py migrate
+```
+
+
 
 # 0. Setup github
 - create dir (mkdir 'mvp1')
@@ -26,7 +43,7 @@ git push -u origin main
 ```
 ## create readme + push
 ```
-git add * && git commit -m "mvp1 update" && git push origin main
+clear && git add * && git commit -m "mvp1 update" && git push origin main
 ```
 
 # 1. Dockerize Django Application
