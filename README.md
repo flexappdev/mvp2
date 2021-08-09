@@ -7,13 +7,21 @@ MVP1:
 
 ## CHEAT
 ```
+# git
+git remote -v
+git remote rm origin
+git remote add origin https://github.com/flexappdev/mvp2.git
+git branch -M main
+git push -u origin main
+
+
 # start
-clear && cd ~/mvp1 && source venv/bin/activate && cd app 
+clear && cd ~/mvp2 && source venv/bin/activate && cd app 
 
 && python manage.py runserver 9000
 
 # end
-cd ~/mvp1 && deactivate && git add * && git commit -m "update" && git push -u origin main
+cd ~/mvp/mvp2 && deactivate && git add * && git commit -m "update" && git push -u origin main
 
 
  && cd ..
