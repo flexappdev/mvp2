@@ -1,24 +1,23 @@
 # MVP2
-MVP1: 
+- MVP2: Docker Compose, Django & PostgreSQL
+- https://docs.docker.com/samples/django/
 
-0. Setup github
-1. Dockerize Django Application
-2. Deploying to EC2
+0. Setup github + venv
+1. Define the project components
+2. Create a Django project
+3. Connect the database
+
 
 ## CHEAT
 ```
-# git
-git remote -v
-git remote rm origin
-git remote add origin https://github.com/flexappdev/mvp2.git
-git branch -M main
-git push -u origin main
-
-
 # start
-clear && cd ~/mvp2 && source venv/bin/activate && cd app 
+clear && cd ~/mvp/mvp2
 
+<!---
+ && source venv/bin/activate && cd app 
 && python manage.py runserver 9000
+
+---> 
 
 # end
 cd ~/mvp/mvp2 && deactivate && git add * && git commit -m "update" && git push -u origin main
@@ -35,30 +34,32 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-
-
-# 0. Setup github
-- create dir (mkdir 'mvp1')
+# 0. Setup: github
+- create dir (mkdir 'mvp2')
 - create github project
 - create readme + push
 - add .gitignore
 
-## create dir
+
+## create dir + push github
+- create readme: README.md
+- git setup
+- git update
 ```
 mkdir mvp1
 cd mvp1
-```
-## create readme + push
-- create readme: README.md
-- 
-```
 git remote add origin https://github.com/flexappdev/mvp1.git
 git branch -M main
 git push -u origin main
 ```
-## create readme + push
+CHEAT
 ```
 clear && git add * && git commit -m "mvp1 update" && git push origin main
+```
+## create venv
+```
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 # 1. Dockerize Django Application
@@ -77,11 +78,7 @@ clear && git add * && git commit -m "mvp1 update" && git push origin main
 - tag image with our username
 - push it to Dockerhub
 
-## create venv
-```
-python3 -m venv venv
-source venv/bin/activate
-```
+
 ## create django project
 ```
 pip install Django
