@@ -11,19 +11,14 @@
 ## CHEAT
 ```
 # start
-clear && cd ~/mvp/mvp2
-
-<!---
- && source venv/bin/activate && cd app 
-&& python manage.py runserver 9000
+clear && cd ~/mvp/mvp2 && source venv/bin/activate 
+&& cd app && python manage.py runserver 9000
 
 ---> 
 
 # end
-cd ~/mvp/mvp2 && deactivate && git add * && git commit -m "update" && git push -u origin main
-
-
- && cd ..
+cd ~/mvp/mvp2 && deactivate && git add * 
+git commit -m "update" && git push -u origin main
 
 # force push
 deactivate && cd .. && 
